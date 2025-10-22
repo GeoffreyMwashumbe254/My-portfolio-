@@ -51,6 +51,18 @@ const Navigation = () => {
                     <div className={`text-xl font-bold transition-colors cursor-pointer hover:opacity-80 ${isScrolled ? 'text-black' : 'text-white'} `} onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
                         Portfolio
                     </div>
+
+                    {/* Desktop Menu */}
+                    <div className="hidden md:flex space-x-8">
+                        {navItems.map((item) => (
+                            <a key={item.href} href={item.href} className={`transition-colors ${isScrolled ? 'text-gray-600 hover:text-black' : 'text-gray-700 hover:text-black'}`} onClick={(e) => {
+                                e.preventDefault();
+                                scrollToSection(item.href);
+                            }}>
+                                {item.label}
+                            </a>
+                        ))}
+                    </div>
                     
                 </div>
 
