@@ -1,6 +1,7 @@
 import React , { useState, useEffect } from 'react';
 import {Menu, X} from 'lucide-react';
 
+
 const Navigation = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -52,17 +53,19 @@ const Navigation = () => {
                         Portfolio
                     </div>
 
-                    {/* Desktop Menu */}
+                     {/* Desktop Menu */}
                     <div className="hidden md:flex space-x-8">
                         {navItems.map((item) => (
                             <a key={item.href} href={item.href} className={`transition-colors ${isScrolled ? 'text-gray-600 hover:text-black' : 'text-gray-700 hover:text-black'}`} onClick={(e) => {
                                 e.preventDefault();
                                 scrollToSection(item.href);
                             }}>
-                                {item.label}
+                                {item.label} 
                             </a>
                         ))}
                     </div>
+
+                   
                     
                 </div>
 

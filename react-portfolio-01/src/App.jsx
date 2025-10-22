@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Navigation from './components/Navigation';
 import {useIntersectionObserver} from './hooks/useIntersectionObsever';
 import {useScrollToTop} from './hooks/useScrollToTop';
